@@ -1,0 +1,25 @@
+{
+    "questions": [
+      {
+        "id": 1,
+        "difficulty": "Easy",
+        "text": "How many wings does an airplane have?",
+        "options": ["One", "Two", "Three"],
+        "answer": "One"
+      },
+      {
+        "id": 2,
+        "difficulty": "Medium",
+         "text": "In which year was 'Domodedovo' airport founded?",
+        "options": ["1985", "1945", "1962"],
+        "answer": "1962"
+      },
+      {
+        "id": 3,
+        "difficulty": "Hard",
+       "text": "PAPI in aviation is...",
+        "options": ["Pressure sensors", "Departure pattern option", "Precision approach path indicator"],
+         "answer": "Precision approach path indicator"
+      }
+    ]
+  }
