@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Тест смены языка</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            margin: 20px;
+            background-color: #f4f4f4;
+            color: #333;
+        }
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: white;
+            padding: 30px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            max-width: 600px;
+            margin: 20px auto;
+        }
+        .content {
+            margin: 20px 0;
+            text-align: center;
+        }
+        .button-container {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 12px 24px;
+            border: none;
+            background-color: #4CAF50;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+        #quiz-container {
+            width: 100%;
+            text-align: left;
+        }
+        .question-container {
+            margin-bottom: 20px;
+            padding: 15px;
+            background-color: #f9f9f9;
+            border-radius: 4px;
+            position: relative;
+        }
+        .question-container h3 {
+            margin-bottom: 10px;
+        }
+        .question-container .question-details {
+            font-size: 0.9em;
+            color: #777;
+            margin-bottom: 5px;
+        }
+        .question-container img {
+            max-width: 100px;
+            max-height: 100px;
+            float: right;
+            margin: 0 0 5px 15px;
+            border-radius: 4px;
+             position: relative;
+        }
+        #quiz-container input[type="radio"] {
+          margin-right: 5px;
+        }
+        #quiz-container label {
+          margin-right: 15px;
+        }
+        #check-answers {
+            padding: 12px 24px;
+            border: none;
+            background-color: #007bff;
+            color: white;
+            cursor: pointer;
+            border-radius: 4px;
+            transition: background-color 0.3s ease;
+        }
+        #check-answers:hover {
+            background-color: #0056b3;
+        }
+        #results {
+            margin: 20px 0;
+            font-weight: bold;
+            padding: 10px;
+            background-color: #e6f7ff;
+            border: 1px solid #b3e5fc;
+            border-radius: 4px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Тест смены языка</h1>
+        <div class="button-container">
+            <button data-lang="ru">Русский</button>
+            <button data-lang="en">English</button>
+        </div>
+        <div id="quiz-container"></div>
+        <button id="check-answers">Проверить ответы</button>
+        <div id="results"></div>
+    </div>
+    <script>
+        const buttons = document.querySelectorAll('button[data-lang]');
+        const quizContainer = document.getElementById('quiz-container');
+        const checkAnswersButton = document.getElementById('check-answers');
+        const resultsContainer = document.getElementById('results');
+        let currentLang = 'ru';
+        let translations;
+
+        const loadTranslations = async (lang) => {
+            try {
+                const response = await fetch(`languages/${lang}.json`);
+                if (!response.ok) {
+                  throw new Error(`HTTP error! status: ${response.status}`);
+                }
+                 translations = await response.json();
+                return translations;
+            } catch (error) {
+                console.error('Failed to load translations:', error);
+                return null;
+            }
+        };
+
+        const updateText = async () => {
+            const loadedTranslations = await loadTranslations(currentLang);
+            if (loadedTranslations) {
+                translations = loadedTranslations;
+                displayQuiz(translations.questions);
+            }
+        };
+
+        const displayQuiz = (questions) => {
+           quizContainer.innerHTML = '';
+
+            questions.forEach(question => {
+               const questionDiv = document.createElement('div');
+                 questionDiv.classList.add('question-container');
+                let imageHTML = '';
+                 if (question.image) {
+                   imageHTML = `<img src="" alt="Question Image">`;
+                 }
+
+              questionDiv.innerHTML = `
+                <div class="question-details">
+                ${question.difficulty}
+                </div>
+                <h3>${question.text}</h3>
+                ${imageHTML}
+                `;
+
+                question.options.forEach(option => {
+                   const optionRadio = document.createElement('input');
+                   optionRadio.type = 'radio';
+                   optionRadio.name = `question-${question.id}`;
+                   optionRadio.value = option;
+                   const optionLabel = document.createElement('label');
+                   optionLabel.textContent = option;
+                   questionDiv.appendChild(optionRadio);
+                   questionDiv.appendChild(optionLabel);
+                   questionDiv.appendChild(document.createElement('br'));
+               });
+                 quizContainer.appendChild(questionDiv);
+            });
+        };
+
+        checkAnswersButton.addEventListener('click', () => {
+           const answers = {};
+           let correctAnswers = 0;
+          if (!translations || !translations.questions) {
+            resultsContainer.textContent = 'Вопросы не загружены.';
+            return;
+        }
+        const questions = translations.questions;
+
+        questions.forEach(question => {
+             const radios = document.querySelectorAll(`input[name="question-${question.id}"]:checked`);
+           if (radios.length > 0) {
+                 answers[question.id] = radios[0].value;
+             if (radios[0].value === question.answer) {
+                  correctAnswers++;
+                   }
+                }
+           });
+
+           const percentage = (correctAnswers / questions.length) * 100;
+           resultsContainer.textContent = `Правильных ответов: ${correctAnswers} из ${questions.length} (${percentage.toFixed(0)}%)`;
+        });
+        buttons.forEach(button => {
+            button.addEventListener('click', async () => {
+                currentLang = button.dataset.lang;
+                await updateText();
+            });
+        });
+
+        updateText();
+    </script>
+</body>
+</html>

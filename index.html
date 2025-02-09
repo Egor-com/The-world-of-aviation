@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Мир Авиации</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            line-height: 1.6;
+        }
+        header, footer {
+            background: #282c34;
+            color: white;
+            text-align: center;
+            padding: 1em 0;
+        }
+        nav {
+            background-color: #333;
+            overflow: hidden;
+        }
+        nav a {
+            float: left;
+            display: block;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+        nav a:hover {
+            background-color: #ddd;
+            color: black;
+        }
+        main {
+            padding: 20px;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        #language-selector {
+            margin: 10px;
+            float: right;
+        }
+        .result {
+            margin-top: 10px;
+            font-weight: bold;
+        }
+        .correct {
+            color: green;
+        }
+        .incorrect {
+            color: red;
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <h1 id="title" data-key="title" data-ru="Добро пожаловать в мир авиации" data-en="Welcome to the World of Aviation" data-fr="Bienvenue dans le monde de l'aviation" data-de="Willkommen in der Welt der Luftfahrt" data-zh="欢迎来到航空世界">Добро пожаловать в мир авиации</h1>
+    <select id="language-selector">
+        <option value="ru">Русский</option>
+        <option value="en">English</option>
+        <option value="fr">Français</option>
+        <option value="de">Deutsch</option>
+        <option value="zh">中文</option>
+    </select>
+</header>
+
+<nav>
+    <a href="#origin" data-key="origin-title" data-ru="Зарождение авиации" data-en="The Birth of Aviation" data-fr="La naissance de l'aviation" data-de="Die Geburt der Luftfahrt" data-zh="航空的诞生">Зарождение авиации</a>
+    <a href="#famous-people" data-key="famous-people-title" data-ru="Известные люди" data-en="Famous Figures" data-fr="Personnalités célèbres" data-de="Berühmte Persönlichkeiten" data-zh="著名人物">Известные люди</a>
+    <a href="#how-planes-work" data-key="how-planes-work-title" data-ru="Принцип работы самолёта" data-en="How Planes Work" data-fr="Comment fonctionnent les avions" data-de="Wie Flugzeuge funktionieren" data-zh="飞机的工作原理">Принцип работы самолёта</a>
+    <a href="#civil-aviation" data-key="civil-aviation-title" data-ru="Начало гражданской авиации" data-en="The Beginning of Civil Aviation" data-fr="Les débuts de l'aviation civile" data-de="Der Beginn der Zivilluftfahrt" data-zh="民用航空的开始">Начало гражданской авиации</a>
+    <a href="#russian-designers" data-key="russian-designers-title" data-ru="Русские конструкторы гражданских самолётов" data-en="Russian Civil Aircraft Designers" data-fr="Concepteurs russes d'avions civils" data-de="Russische zivile Flugzeugdesigner" data-zh="俄罗斯民用飞机设计师">Русские конструкторы гражданских самолётов</a>
+    <a href="#modern-aviation" data-key="modern-aviation-title" data-ru="Современная гражданская авиация" data-en="Modern Civil Aviation" data-fr="Aviation civile moderne" data-de="Moderne Zivilluftfahrt" data-zh="现代民用航空">Современная гражданская авиация</a>
+     <a href="#domodedovo-airport" data-key="domodedovo-airport-title" data-ru="Аэропорт Домодедово" data-en="Domodedovo Airport" data-fr="Aéroport de Domodedovo" data-de="Flughafen Domodedowo" data-zh="多莫杰多沃机场">Аэропорт Домодедово</a>
+    <a href="#domodedovo" data-key="domodedovo-title" data-ru="Domodedovo Airlines" data-en="Domodedovo Airlines" data-fr="Domodedovo Airlines" data-de="Domodedovo Airlines" data-zh="多莫杰多沃航空公司">Domodedovo Airlines</a>
+    <a href="#trivia" data-key="trivia-title" data-ru="Викторина" data-en="Quiz" data-fr="Quiz" data-de="Quiz" data-zh="测验">Викторина</a>
+     <a href="test.html" data-key="test-link" data-ru="Тест" data-en="Test" data-fr="Test" data-de="Test" data-zh="测验">Тест</a>
+</nav>
+
+<main>
+    <section id="origin">
+        <h2 data-key="origin-title" data-ru="Зарождение авиации" data-en="The Birth of Aviation" data-fr="La naissance de l'aviation" data-de="Die Geburt der Luftfahrt" data-zh="航空的诞生">Зарождение авиации</h2>
+        <p data-key="origin-content" data-ru="Зарождение авиации уходит корнями в древние времена. Некоторые исследователи полагают, что первые попытки создания летательных аппаратов были предприняты в Древнем Египте и Китае. Например, в Китае были созданы змеевидные фейерверки, которые поднимались в воздух.В Средние века в Италии Леонардо да Винчи изучал птиц и рисовал проекты машин, которые можно было бы использовать для полётов. Однако его идеи не получили практического применения.Активно покорять воздух человечество начало в конце XVIII века, когда в Европе появились первые аэростаты — воздушные шары. 4 В 1783 году братья Монгольфье совершили на таком аэростате первый полёт. Первый самолёт был изобретён в начале XX века. Братья Райт, Уилбер и Орвилл, считаются основателями авиации. Они провели множество экспериментов с моделями самолётов и вертолётов, прежде чем совершить первый управляемый полёт на самолёте в 1903 году. После этого события развитие авиации пошло стремительными темпами. За несколько лет были созданы более крупные и мощные самолёты, способные преодолевать большие расстояния. 1" data-en="The birth of aviation dates back to ancient times. Some researchers believe that the first attempts to create aircraft were made in ancient Egypt and China. For example, in China, kite-like fireworks were created that rose into the air. In the Middle Ages in Italy, Leonardo da Vinci studied birds and drew projects of machines that could be used for flying. However, his ideas were not put into practical use. Humanity began to actively conquer the air in the late 18th century, when the first aerostats appeared in Europe - hot air balloons. 4 In 1783, the Montgolfier brothers made the first flight in such an aerostat. The first airplane was invented in the early 20th century. The Wright brothers, Wilbur and Orville, are considered the founders of aviation. They conducted many experiments with airplane and helicopter models before making the first controlled flight in an airplane in 1903. After this event, the development of aviation went at a rapid pace. Within a few years, larger and more powerful aircraft capable of covering long distances were created. 1" data-fr="La naissance de l'aviation remonte aux temps anciens. Certains chercheurs pensent que les premières tentatives de création d'avions ont été faites dans l'Égypte antique et en Chine. Par exemple, en Chine, des feux d'artifice ressemblant à des cerfs-volants ont été créés qui montaient dans les airs.Au Moyen Âge en Italie, Léonard de Vinci étudiait les oiseaux et dessinait des projets de machines qui pourraient être utilisées pour voler. Cependant, ses idées n'ont pas été mises en pratique. L'humanité a commencé à conquérir activement l'air à la fin du XVIIIe siècle, lorsque les premiers aérostats sont apparus en Europe - des montgolfières. 4 En 1783, les frères Montgolfier ont effectué le premier vol dans un tel aérostat. Le premier avion a été inventé au début du XXe siècle. Les frères Wright, Wilbur et Orville, sont considérés comme les fondateurs de l'aviation. Ils ont mené de nombreuses expériences avec des modèles d'avions et d'hélicoptères avant d'effectuer le premier vol contrôlé dans un avion en 1903. Après cet événement, le développement de l'aviation s'est accéléré. En quelques années, des avions plus grands et plus puissants, capables de parcourir de longues distances, ont été créés. 1" data-de="Die Geburt der Luftfahrt reicht bis in die Antike zurück. Einige Forscher glauben, dass die ersten Versuche, Flugzeuge zu bauen, im alten Ägypten und China unternommen wurden. In China wurden beispielsweise drachenartige Feuerwerkskörper geschaffen, die in die Luft stiegen. Im Mittelalter studierte Leonardo da Vinci in Italien Vögel und zeichnete Entwürfe für Maschinen, die zum Fliegen verwendet werden könnten. Seine Ideen wurden jedoch nicht in die Praxis umgesetzt. Die Menschheit begann im späten 18. Jahrhundert, die Luft aktiv zu erobern, als in Europa die ersten Aerostaten - Heißluftballons - auftauchten. 4 Im Jahr 1783 unternahmen die Brüder Montgolfier den ersten Flug in einem solchen Aerostat. Das erste Flugzeug wurde im frühen 20. Jahrhundert erfunden. Die Gebrüder Wright, Wilbur und Orville, gelten als die Begründer der Luftfahrt. Sie führten viele Experimente mit Flugzeug- und Hubschraubermodellen durch, bevor sie 1903 den ersten kontrollierten Flug in einem Flugzeug durchführten. Nach diesem Ereignis verlief die Entwicklung der Luftfahrt rasant. Innerhalb weniger Jahre wurden größere und leistungsstärkere Flugzeuge geschaffen, die in der Lage waren, große Entfernungen zurückzulegen. 1" data-zh="航空的诞生可以追溯到古代。一些研究人员认为，在古埃及和中国就有人尝试制造飞行器。例如，在中国，人们创造了像风筝一样的烟花，可以升入空中。 中世纪时，意大利的列奥纳多·达芬奇研究鸟类，并绘制了可用于飞行的机器设计图。然而，他的想法并没有得到实际应用。 1\n\n18世纪末，当欧洲出现第一批航空器（热气球）时，人类开始积极征服天空。4 1783年，蒙哥尔费兄弟乘坐这样的航空器进行了第一次飞行。 第一架飞机是20世纪初发明的。莱特兄弟（威尔伯和奥维尔）被认为是航空业的创始人。他们在1903年进行第一次可控飞行之前，对飞机和直升机模型进行了许多实验。 在这一事件发生后，航空业的发展突飞猛进。在短短几年内，就制造出了更大更强大的飞机，能够跨越遥远的距离。 1">Зарождение авиации уходит корнями в древние времена. Некоторые исследователи полагают, что первые попытки создания летательных аппаратов были предприняты в Древнем Египте и Китае. Например, в Китае были созданы змеевидные фейерверки, которые поднимались в воздух. 1
+
+В Средние века в Италии Леонардо да Винчи изучал птиц и рисовал проекты машин, которые можно было бы использовать для полётов. Однако его идеи не получили практического применения. 1
+
+Активно покорять воздух человечество начало в конце XVIII века, когда в Европе появились первые аэростаты — воздушные шары. 4 В 1783 году братья Монгольфье совершили на таком аэростате первый полёт. 1
+
+Первый самолёт был изобретён в начале XX века. Братья Райт, Уилбер и Орвилл, считаются основателями авиации. Они провели множество экспериментов с моделями самолётов и вертолётов, прежде чем совершить первый управляемый полёт на самолёте в 1903 году. 1
+
+После этого события развитие авиации пошло стремительными темпами. За несколько лет были созданы более крупные и мощные самолёты, способные преодолевать большие расстояния. 1</p>
+        <img src="https://edu.ru/uploads/media/content/0001/13/b6d864e55c34a476a12c28635742f4080bafe7c7.jpeg" alt="Историческое фото">
+    </section>
+
+    <section id="famous-people">
+        <h2 data-key="famous-people-title" data-ru="Известные люди" data-en="Famous Figures" data-fr="Personnalités célèbres" data-de="Berühmte Persönlichkeiten" data-zh="著名人物">Известные люди</h2>
+        <p data-key="famous-people-content" data-ru="Уилбер и Орвилл Райт — изобретатели и авиаконструкторы, которые сконструировали и построили первый в истории самолёт, способный к полёту. Некоторые достижения братьев Райт:Разработка практически применимых систем управления самолётом, основанных на трёх осях его вращения. Это давало возможность не только поддерживать равновесие аппарата в процессе воздухоплавания, но и править им. Первый полёт человека на воздушном устройстве, оборудованном двигателем. Получение патента США на изобретение системы аэродинамического управления, осуществляемого с помощью поверхностей самолёта. Проведение многочисленных экспериментов в аэродинамической трубе, которые стали решающими в конструировании эффективных пропеллеров и самолётных крыльев. В 1909 году братья Райт основали в США фирму Wright Company по производству самолётов и двигателей. Первый из братьев ушёл из жизни в 1912 году от тифа. Младший по возрасту Орвилл Райт пережил своего брата на 36 лет. 4" data-en="Wilbur and Orville Wright were inventors and aircraft designers who designed and built the first airplane in history capable of flight. Some of the Wright brothers' achievements:Developing practical aircraft control systems based on the three axes of its rotation. This made it possible not only to maintain the balance of the aircraft in the process of flight, but also to control it. The first flight of a man on an air device equipped with an engine. Obtaining a US patent for the invention of an aerodynamic control system carried out using the aircraft's surfaces. Conducting numerous experiments in a wind tunnel, which became crucial in the design of efficient propellers and aircraft wings.  1909, the Wright brothers founded the Wright Company in the USA to manufacture aircraft and engines. The first of the brothers died in 1912 from typhus. The younger Orville Wright outlived his brother by 36 years. 4" data-fr="Wilbur et Orville Wright étaient des inventeurs et des concepteurs d'avions qui ont conçu et construit le premier avion de l'histoire capable de voler. nQuelques réalisations des frères Wright :Développement de systèmes de commande d'aéronef pratiques basés sur les trois axes de sa rotation. Cela a permis non seulement de maintenir l'équilibre de l'appareil pendant le vol, mais aussi de le contrôler. Le premier vol d'un homme sur un engin aérien équipé d'un moteur. Obtention d'un brevet américain pour l'invention d'un système de commande aérodynamique réalisé à l'aide des surfaces de l'aéronef. Réalisation de nombreuses expériences en soufflerie**, qui sont devenues cruciales dans la conception d'hélices et d'ailes d'aéronefs efficaces. 1\nEn 1909, les frères Wright ont fondé aux États-Unis la société Wright Company pour la fabrication d'aéronefs et de moteurs. Le premier des frères est décédé en 1912 du typhus. Le cadet Orville Wright a survécu à son frère de 36 ans. 4" data-de="Wilbur und Orville Wright waren Erfinder und Flugzeugkonstrukteure, die das erste Flugzeug der Geschichte konstruierten und bauten, das zum Fliegen fähig war. Einige der Leistungen der Gebrüder Wright:Entwicklung praktisch anwendbarer Flugzeugsteuerungssysteme, die auf den drei Achsen seiner Drehung basieren. Dies ermöglichte es nicht nur, das Gleichgewicht des Flugzeugs während des Fluges aufrechtzuerhalten, sondern es auch zu steuern. Der erste Flug eines Menschen auf einem mit einem Motor ausgestatteten Fluggerät.Erhalt eines US-Patents für die Erfindung eines aerodynamischen Steuerungssystems, das mit Hilfe der Flugzeugoberflächen durchgeführt wird. Durchführung zahlreicher Experimente im Windkanal**, die bei der Konstruktion effizienter Propeller und Flugzeugflügel entscheidend waren. 1\nIm Jahr 1909 gründeten die Gebrüder Wright in den USA die Firma Wright Company zur Herstellung von Flugzeugen und Motoren. nDer erste der Brüder starb 1912 an Typhus. Der jüngere Orville Wright überlebte seinen Bruder um 36 Jahre. 4" data-zh="威尔伯和奥维尔·莱特是发明家和飞机设计师，他们设计并建造了历史上第一架能够飞行的飞机。 莱特兄弟的一些成就：开发了基于飞机三个旋转轴的实用飞机控制系统。这使得飞机不仅能够在飞行过程中保持平衡，而且能够控制它。 1\n人类首次在配备发动机的飞行装置上飞行。 获得美国专利，该专利是关于使用飞机表面实现的空气动力控制系统发明。 在风洞中进行了大量实验，** 这对于设计高效的螺旋桨和飞机机翼至关重要。 1\n1909年，莱特兄弟在美国创立了莱特公司，生产飞机和发动机。 2\n\n第一个兄弟于 1912 年死于斑疹伤寒。弟弟奥维尔·莱特比他的兄弟多活了 36 年。 4">Уилбер и Орвилл Райт — изобретатели и авиаконструкторы, которые сконструировали и построили первый в истории самолёт, способный к полёту. 1
+
+Некоторые достижения братьев Райт:
+
+Разработка практически применимых систем управления самолётом, основанных на трёх осях его вращения. Это давало возможность не только поддерживать равновесие аппарата в процессе воздухоплавания, но и править им. 1
+Первый полёт человека на воздушном устройстве, оборудованном двигателем. 1
+Получение патента США на изобретение системы аэродинамического управления, осуществляемого с помощью поверхностей самолёта. 13
+Проведение многочисленных экспериментов в аэродинамической трубе**, которые стали решающими в конструировании эффективных пропеллеров и самолётных крыльев. 1
+В 1909 году братья Райт основали в США фирму Wright Company по производству самолётов и двигателей. 2
+
+Первый из братьев ушёл из жизни в 1912 году от тифа. Младший по возрасту Орвилл Райт пережил своего брата на 36 лет. 4 </p>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/87/Orville_Wilbur_Wright.jpg/640px-Orville_Wilbur_Wright.jpg" alt="Фотография известной личности">
+    </section>
+
+    <section id="how-planes-work">
+        <h2 data-key="how-planes-work-title" data-ru="Принцип работы самолёта" data-en="How Planes Work" data-fr="Comment fonctionnent les avions" data-de="Wie Flugzeuge funktionieren" data-zh="飞机的工作原理">Принцип работы самолёта</h2>
+        <p data-key="how-planes-work-content" data-ru="Принцип работы крыла самолёта основан на разнице давлений. 1 Когда самолёт движется в воздухе, благодаря форме крыла создаётся различное давление воздуха сверху и снизу крыла. Поскольку верхняя поверхность крыла обычно имеет большую кривизну, воздух над ней проходит быстрее, что создаёт зону низкого давления. Снизу крыла давление выше. Эта разница в давлении генерирует подъёмную силу, поддерживающую самолёт в воздухе. Для управления аэродинамикой во время различных фаз полёта крыло оснащено предкрылками и закрылками — подвижными частями. Например, на взлёте и посадке большая площадь крыла, получаемая с помощью выдвигающихся элементов, помогает создать нужную подъёмную силу. А в полёте на высоких скоростях большое крыло, наоборот, не нужно, и закрылки и предкрылки подтянуты и прижаты к крылу. 2" data-en="The principle of the aircraft wing operation is based on the pressure difference. 1 When an airplane moves through the air, due to the shape of the wing, different air pressure is created above and below the wing. Since the upper surface of the wing usually has a greater curvature, the air above it passes faster, which creates a low-pressure zone. The pressure below the wing is higher. This difference in pressure generates lift, supporting the aircraft in the air. To control aerodynamics during various phases of flight, the wing is equipped with slats and flaps — movable parts. For example, during takeoff and landing, a large wing area, obtained with the help of retractable elements, helps to create the necessary lift. And in flight at high speeds, a large wing, on the contrary, is not needed, and the slats and flaps are pulled up and pressed to the wing. 2" data-fr="Le principe de fonctionnement de l'aile d'un avion est basé sur la différence de pression. 1 Lorsqu'un avion se déplace dans l'air, grâce à la forme de l'aile, une pression d'air différente est créée au-dessus et au-dessous de l'aile. Comme la surface supérieure de l'aile a généralement une plus grande courbure, l'air au-dessus passe plus vite, ce qui crée une zone de basse pression. La pression sous l'aile est plus élevée. Cette différence de pression génère une portance, soutenant l'avion dans l'air. Pour contrôler l'aérodynamique pendant les différentes phases du vol, l'aile est équipée de becs et de volets — des parties mobiles. Par exemple, au décollage et à l'atterrissage, une grande surface d'aile, obtenue à l'aide d'éléments rétractables, permet de créer la portance nécessaire. Et en vol à grande vitesse, une grande aile, au contraire, n'est pas nécessaire, et les becs et les volets sont remontés et appuyés contre l'aile. 2" data-de="Das Funktionsprinzip des Tragflügels eines Flugzeugs basiert auf dem Druckunterschied. 1 Wenn sich ein Flugzeug durch die Luft bewegt, entsteht durch die Form des Flügels ein unterschiedlicher Luftdruck über und unter dem Flügel. Da die Oberseite des Flügels normalerweise eine größere Krümmung aufweist, strömt die Luft darüber schneller, wodurch ein Unterdruckbereich entsteht. Unter dem Flügel ist der Druck höher. Dieser Druckunterschied erzeugt Auftrieb und hält das Flugzeug in der Luft. Zur Steuerung der Aerodynamik während verschiedener Flugphasen ist der Flügel mit Vorflügeln und Klappen ausgestattet – beweglichen Teilen. Beim Starten und Landen hilft beispielsweise eine große Flügelklappe, die mithilfe von ausfahrbaren Elementen gewonnen wird, den notwendigen Auftrieb zu erzeugen. Und im Flug bei hohen Geschwindigkeiten ist ein großer Flügel im Gegenteil nicht erforderlich, und die Vorflügel und Klappen werden angezogen und an den Flügel gedrückt. 2" data-zh="飞机机翼的工作原理基于压力差。 1 当飞机在空中移动时，由于机翼的形状，会在机翼上方和下方产生不同的气压。 由于机翼的上表面通常具有更大的曲率，因此上方的空气通过得更快，从而产生低压区。机翼下方的压力更高。这种压力差产生升力，将飞机支撑在空中。 为了控制飞行不同阶段的空气动力学，机翼配备了前缘襟翼和后缘襟翼——可移动的部分。例如，在起飞和着陆时，借助可伸缩元件获得的大面积机翼有助于产生必要的升力。而在高速飞行时，则不需要大面积机翼，相反，襟翼会收起并压紧到机翼上。 2">Принцип работы крыла самолёта основан на разнице давлений. 1 Когда самолёт движется в воздухе, благодаря форме крыла создаётся различное давление воздуха сверху и снизу крыла. 2
+
+Поскольку верхняя поверхность крыла обычно имеет большую кривизну, воздух над ней проходит быстрее, что создаёт зону низкого давления. Снизу крыла давление выше. Эта разница в давлении генерирует подъёмную силу, поддерживающую самолёт в воздухе. 2
+
+Для управления аэродинамикой во время различных фаз полёта крыло оснащено предкрылками и закрылками — подвижными частями. Например, на взлёте и посадке большая площадь крыла, получаемая с помощью выдвигающихся элементов, помогает создать нужную подъёмную силу. А в полёте на высоких скоростях большое крыло, наоборот, не нужно, и закрылки и предкрылки подтянуты и прижаты к крылу. 2</p>
+        <img src="https://avatars.mds.yandex.net/i?id=e519da9916fb7ed181234f208a44c5af79fcd0bc-12422470-images-thumbs&n=13" alt="Иллюстрация">
+    </section>
+
+    <section id="civil-aviation">
+        <h2 data-key="civil-aviation-title" data-ru="Начало гражданской авиации" data-en="The Beginning of Civil Aviation" data-fr="Les débuts de l'aviation civile" data-de="Der Beginn der Zivilluftfahrt" data-zh="民用航空的开始">Начало гражданской авиации</h2>
+        <p data-key="civil-aviation-content" data-ru="«Гражданская авиация берет начало в далеком 1901 году. Первопроходцами были братья Райт. Они совершили первый управляемый полет на летательном аппарате тяжелее воздуха. Историческое событие состоялось неподалеку от городка Китти Хок в штате Северная Каролина. Самолет Wright Flyer (его изобрели и собрали два брата - Орвилл и Вилбур Wilbur Райт) пролетел 36.5 метров и продержался в воздухе 12 секунд." data-en="Civil aviation dates back to 1901. The pioneers were the Wright brothers. They made the first controlled flight on a heavier-than-air aircraft. The historic event took place near the town of Kitty Hawk in North Carolina. The Wright Flyer (invented and assembled by two brothers - Orville and Wilbur Wright) flew 36.5 meters and stayed in the air for 12 seconds." data-fr="«L'aviation civile remonte à 1901. Les pionniers étaient les frères Wright. Ils ont effectué le premier vol contrôlé sur un aéronef plus lourd que l'air. L'événement historique a eu lieu près de la ville de Kitty Hawk en Caroline du Nord. L'avion Wright Flyer (inventé et assemblé par deux frères - Orville et Wilbur Wright) a volé 36,5 mètres et est resté en l'air pendant 12 secondes." data-de="Die Zivilluftfahrt geht auf das ferne Jahr 1901 zurück. Die Pioniere waren die Gebrüder Wright. Sie absolvierten den ersten kontrollierten Flug mit einem Fluggerät, das schwerer war als Luft. Das historische Ereignis fand in der Nähe der Stadt Kitty Hawk in North Carolina statt. Das Flugzeug Wright Flyer (erfunden und zusammengebaut von zwei Brüdern - Orville und Wilbur Wright) flog 36,5 Meter und blieb 12 Sekunden in der Luft." data-zh="“民用航空可以追溯到遥远的 1901 年。先驱是莱特兄弟。 他们首次在比空气重的飞行器上实现了受控飞行。 这一历史性事件发生在北卡罗来纳州基蒂霍克镇附近。 莱特飞行者号（由奥维尔和威尔伯·莱特兄弟发明并组装）飞行了 36.5 米，并在空中停留了 12 秒。”">«Гражданская авиация берет начало в далеком 1901 году. Первопроходцами были братья Райт. Они совершили первый управляемый полет на летательном аппарате тяжелее воздуха. Историческое событие состоялось неподалеку от городка Китти Хок в штате Северная Каролина. Самолет Wright Flyer (его изобрели и собрали два брата - Орвилл и Вилбур Wilbur Райт) пролетел 36.5 метров и продержался в воздухе 12 секунд.</p>
+         <img src="https://www.nps.gov/common/uploads/teachers/assets/images/nri/20180917/teachers/11A86012-B8C4-5C09-22039F17355F5F72/11A86012-B8C4-5C09-22039F17355F5F72.jpg" alt="Исторические фото">
+    </section>
+
+    <section id="russian-designers">
+        <h2 data-key="russian-designers-title" data-ru="Русские конструкторы гражданских самолётов" data-en="Russian Civil Aircraft Designers" data-fr="Concepteurs russes d'avions civils" data-de="Russische zivile Flugzeugdesigner" data-zh="俄罗斯民用飞机设计师">Русские конструкторы гражданских самолётов</h2>
+        <p data-key="russian-designers-content" data-ru="Андрей Николаевич Туполев (1888–1972) — советский учёный и авиаконструктор, генерал-полковник-инженер, доктор технических наук. Родился 29 октября (10 ноября) 1888 года в селе Пустомазово Тверской губернии. С детства преуспевал в точных науках. Окончив Тверскую гимназию, поступил в Императорское Московское техническое училище (ныне — МВТУ им. Баумана) и ещё там стал членом воздухоплавательского кружка. Ещё до революции проектировал аэродинамические трубы, вместе с Н. Е. Жуковским создавал Центральный аэрогидродинамический институт. В 1925–1932 годах создал свои первые самолёты — лучший в мире бомбардировщик ТБ-1 и приземлившийся на Северном полюсе ТБ-3. Он же занимался проектированием первых советских дирижаблей. 21 октября 1937 года Туполев был арестован по обвинению во вредительстве, принадлежности к контрреволюционной организации. 28 мая 1940 года приговорён к 15 годам лишения свободы и 5 годам поражения в правах, а также конфискации личного имущества. Только после смерти Сталина Андрей Николаевич был в 1955 году полностью реабилитирован. На свободе Туполев в 1957 году разработал самолёты, ставшие гордостью отечественной гражданской авиации — межконтинентальный пассажирский самолёт Ту-114 и первый в мире сверхзвуковой пассажирский самолёт Ту-144. Андрей Туполев прожил долгую жизнь, был почётным гражданином Нью-Йорка, Парижа и подмосковного города Жуковский, трижды Героем социалистического труда. Скончался 23 декабря 1972 года и похоронен на Новодевичьем кладбище в Москве." data-en="Andrei Nikolaevich Tupolev (1888–1972) was a Soviet scientist and aircraft designer, Colonel-General-Engineer, Doctor of Technical Sciences. He was born on October 29 (November 10), 1888 in the village of Pustomazovo, Tver province. Since childhood, he excelled in the exact sciences. After graduating from the Tver Gymnasium, he entered the Imperial Moscow Technical School (now the
+        After graduating from the Tver Gymnasium, he entered the Imperial Moscow Technical School (now the Bauman Moscow State Technical University) and while there became a member of the aeronautical circle. Even before the revolution, he designed wind tunnels, and together with N. E. Zhukovsky created the Central Aerohydrodynamic Institute. In 1925–1932, he created his first aircraft — the world's best bomber TB-1 and the TB-3, which landed at the North Pole. He was also involved in the design of the first Soviet airships. On October 21, 1937, Tupolev was arrested on charges of sabotage and membership in a counter-revolutionary organization. On May 28, 1940, he was sentenced to 15 years of imprisonment and 5 years of deprivation of rights, as well as confiscation of personal property. It was only after Stalin's death that Andrei Nikolaevich was fully rehabilitated in 1955. At large, in 1957, Tupolev designed aircraft that became the pride of domestic civil aviation — the intercontinental passenger aircraft Tu-114 and the world's first supersonic passenger aircraft Tu-144. Andrei Tupolev lived a long life, was an honorary citizen of New York, Paris and the town of Zhukovsky near Moscow, and was three times Hero of Socialist Labor. He died on December 23, 1972 and was buried at the Novodevichy Cemetery in Moscow." data-fr="Andreï Nikolaïevitch Tupolev (1888-1972) était un scientifique et un concepteur d'avions soviétique, colonel-général-ingénieur, docteur en sciences techniques. Il est né le 29 octobre (10 novembre) 1888 dans le village de Pustomazovo, province de Tver. Dès son enfance, il excellait dans les sciences exactes. Après avoir obtenu son diplôme du gymnase de Tver, il est entré à l'école technique impériale de Moscou (aujourd'hui l'université technique d'État Bauman de Moscou) et y est devenu membre du cercle aéronautique. Même avant la révolution, il a conçu des souffleries, et avec N. E. Joukovski, il a créé l'Institut central d'aérohydrodynamique. Dans les années 1925-1932, il a créé ses premiers avions : le meilleur bombardier du monde, le TB-1, et le TB-3 qui s'est posé au pôle Nord. Il a également été impliqué dans la conception des premiers dirigeables soviétiques. 2\n\nLe 21 octobre 1937, Tupolev a été arrêté sous l'accusation de sabotage et d'appartenance à une organisation contre-révolutionnaire. Le 28 mai 1940, il a été condamné à 15 ans d'emprisonnement et à 5 ans de privation de droits, ainsi qu'à la confiscation de ses biens personnels. 1\n\nCe n'est qu'après la mort de Staline qu'Andreï Nikolaïevitch a été entièrement réhabilité en 1955. 2\n\nEn liberté, en 1957, Tupolev a conçu des avions qui sont devenus la fierté de l'aviation civile nationale : l'avion de passagers intercontinental Tu-114 et le premier avion de passagers supersonique au monde, le Tu-144. 2\n\nAndreï Tupolev a vécu une longue vie, a été citoyen d'honneur de New York, de Paris et de la ville de Joukovski, près de Moscou, et a été trois fois Héros du travail socialiste. 2\n\nIl est décédé le 23 décembre 1972 et a été enterré au cimetière Novodevitchi à Moscou." data-de="Andrei Nikolajewitsch Tupolew (1888–1972) war ein sowjetischer Wissenschaftler und Flugzeugkonstrukteur, Generaloberst-Ingenieur und Doktor der technischen Wissenschaften. 1\n\nEr wurde am 29. Oktober (10. November) 1888 im Dorf Pustomasowo, Gouvernement Twer, geboren. Seit seiner Kindheit zeichnete er sich in den exakten Wissenschaften aus. 2\n\nNach seinem Abschluss am Twerer Gymnasium trat er in die Kaiserliche Moskauer Technische Schule (heute die Bauman-Universität Moskau) ein und wurde dort Mitglied des Luftfahrtkreises. 2\n\nNoch vor der Revolution entwarf er Windkanäle und schuf zusammen mit N. E. Schukowski das Zentrale Aerohydrodynamische Institut. 2\n\nIn den Jahren 1925–1932 schuf er seine ersten Flugzeuge – den weltweit besten Bomber TB-1 und die TB-3, die am Nordpol landete. Er war auch an der Konstruktion der ersten sowjetischen Luftschiffe beteiligt. 2\n\nAm 21. Oktober 1937 wurde Tupolew wegen Sabotage und Zugehörigkeit zu einer konterrevolutionären Organisation verhaftet. Am 28. Mai 1940 wurde er zu 15 Jahren Haft und 5 Jahren Verlust der Bürgerrechte sowie zur Beschlagnahme seines persönlichen Eigentums verurteilt. 1\n\nErst nach Stalins Tod wurde Andrei Nikolajewitsch im Jahr 1955 vollständig rehabilitiert. 2\n\nIn Freiheit entwickelte Tupolew 1957 Flugzeuge, die zum Stolz der heimischen Zivilluftfahrt wurden – das Interkontinental-Passagierflugzeug Tu-114 und das weltweit erste Überschall-Passagierflugzeug Tu-144. 2\n\nAndrei Tupolew lebte ein langes Leben, war Ehrenbürger von New York, Paris und der Stadt Schukowski bei Moskau und war dreimal Held der sozialistischen Arbeit. 2\n\nEr starb am 23. Dezember 1972 und wurde auf dem Nowodewitschi-Friedhof in Moskau beigesetzt." data-zh="安德烈·尼古拉耶维奇·图波列夫（1888-1972 年）是苏联科学家和飞机设计师，工程上将、技术科学博士。 1\n\n他于 1888 年 10 月 29 日（11 月 10 日）出生于特维尔省普斯托马佐沃村。 他从小就在精密科学方面表现出色。 2\n\n从特维尔体育馆毕业后，他进入了帝国莫斯科技术学校（现在的鲍曼莫斯科国立技术大学），并在那里成为了航空俱乐部的一员。 2\n\n早在革命之前，他就设计了风洞，并与 N.E. Жуковский 一起创建了中央空气流体力学研究所。 2\n\n1925-1932 年，他设计了他的第一批飞机——世界上最好的轰炸机 TB-1 和在北极着陆的 TB-3。他还参与了第一艘苏联飞艇的设计。 2\n\n1937 年 10 月 21 日，图波列夫因破坏和加入反革命组织而被捕。 1940 年 5 月 28 日，他被判处 15 年监禁和 5 年剥夺权利，并没收个人财产。 1\n\n直到斯大林去世后，安德烈·尼古拉耶维奇才于 1955 年被完全恢复名誉。 2\n\n在自由身之后，图波列夫于 1957 年设计了成为国产民用航空骄傲的飞机——洲际客机图-114 和世界上第一架超音速客机图-144。 2\n\n安德烈·图波列夫一生漫长，是纽约、巴黎和莫斯科附近茹科夫斯基市的荣誉市民，并三次获得社会主义劳动英雄称号。 2\n\n他于 1972 年 12 月 23 日去世，安葬于莫斯科的新圣女公墓。">Андрей Николаевич Туполев (1888–1972) — советский учёный и авиаконструктор, генерал-полковник-инженер, доктор технических наук. 1
+
+Родился 29 октября (10 ноября) 1888 года в селе Пустомазово Тверской губернии. С детства преуспевал в точных науках. 2
+
+Окончив Тверскую гимназию, поступил в Императорское Московское техническое училище (ныне — МВТУ им. Баумана) и ещё там стал членом воздухоплавательского кружка. 2
+
+Ещё до революции проектировал аэродинамические трубы, вместе с Н. Е. Жуковским создавал Центральный аэрогидродинамический институт. 2
+
+В 1925–1932 годах создал свои первые самолёты — лучший в мире бомбардировщик ТБ-1 и приземлившийся на Северном полюсе ТБ-3. Он же занимался проектированием первых советских дирижаблей. 2
+
+21 октября 1937 года Туполев был арестован по обвинению во вредительстве, принадлежности к контрреволюционной организации. 28 мая 1940 года приговорён к 15 годам лишения свободы и 5 годам поражения в правах, а также конфискации личного имущества. 1
+
+Только после смерти Сталина Андрей Николаевич был в 1955 году полностью реабилитирован. 2
+
+На свободе Туполев в 1957 году разработал самолёты, ставшие гордостью отечественной гражданской авиации — межконтинентальный пассажирский самолёт Ту-114 и первый в мире сверхзвуковой пассажирский самолёт Ту-144. 2
+
+Андрей Туполев прожил долгую жизнь, был почётным гражданином Нью-Йорка, Парижа и подмосковного города Жуковский, трижды Героем социалистического труда. 2
+
+Скончался 23 декабря 1972 года и похоронен на Новодевичьем кладбище в Москве.</p>
+        <img src="https://www.tupolev.ru/upload/resize_cache/iblock/3f9/550_550_0/27c671102afaf3d4c826e3135b845fcc.jpg" alt="Фото конструктора">
+    </section>
+
+    <section id="modern-aviation">
+        <h2 data-key="modern-aviation-title" data-ru="Современная гражданская авиация" data-en="Modern Civil Aviation" data-fr="Aviation civile moderne" data-de="Moderne Zivilluftfahrt" data-zh="现代民用航空">Современная гражданская авиация</h2>
+        <p data-key="modern-aviation-content" data-ru="ражданская авиация - это вид авиации, которая используется для обеспечения потребностей граждан и экономики (перевозка населения, почты, грузов, выполнения аэрофотосъемки местности, обработки сельскохозяйственных растений от вредителей и т. д.).\nОна делится на авиацию общего назначения и коммерческую авиацию. Гражданская авиация применяется для удовлетворения экономических и личных потребностей населения." data-en="Civil aviation is a type of aviation that is used to meet the needs of citizens and the economy (transportation of people, mail, cargo, aerial photography, treatment of agricultural plants from pests, etc.).\nIt is divided into general aviation and commercial aviation. Civil aviation is used to meet the economic and personal needs of the population." data-fr="L'aviation civile est un type d'aviation qui est utilisé pour répondre aux besoins des citoyens et de l'économie (transport de personnes, de courrier, de marchandises, réalisation de prises de vues aériennes, traitement des plantes agricoles contre les parasites, etc.).\nElle est divisée en aviation générale et aviation commerciale. L'aviation civile est utilisée pour répondre aux besoins économiques et personnels de la population." data-de="Die Zivilluftfahrt ist eine Art der Luftfahrt, die zur Befriedigung der Bedürfnisse von Bürgern und Wirtschaft dient (Beförderung von Personen, Post, Fracht, Durchführung von Luftbildaufnahmen von Gelände, Bekämpfung von Schädlingen in landwirtschaftlichen Pflanzen usw.).\nSie wird in die allgemeine Luftfahrt und die kommerzielle Luftfahrt unterteilt. Die Zivilluftfahrt dient der Deckung der wirtschaftlichen und persönlichen Bedürfnisse der Bevölkerung." data-zh="民用航空是一种用于满足公民和经济需求的航空类型（运输人员、邮件、货物、航拍、防治农作物害虫等）。它分为通用航空和商业航空。民用航空用于满足人民的经济和个人需求。">ражданская авиация - это вид авиации, которая используется для обеспечения потребностей граждан и экономики (перевозка населения, почты, грузов, выполнения аэрофотосъемки местности, обработки сельскохозяйственных растений от вредителей и т. д.).
+Она делится на авиацию общего назначения и коммерческую авиацию. Гражданская авиация применяется для удовлетворения экономических и личных потребностей населения.</p>
+         <img src="https://avatars.dzeninfra.ru/get-zen_doc/176438/pub_5e9e2af638c82369f4d84ffe_5e9e2b0324270736479fe65e/scale_1200" alt="Современный самолёт">
+    </section>
+    
+     <section id="domodedovo-airport">
+       <h2 data-key="domodedovo-airport-title" data-ru="Аэропорт Домодедово" data-en="Domodedovo Airport" data-fr="Aéroport de Domodedovo" data-de="Flughafen Domodedowo" data-zh="多莫杰多沃机场">Аэропорт Домодедово</h2>
+         <p data-key="domodedovo-airport-content" data-ru="Аэропорт Домодедово — один из крупнейших аэропортов России и Восточной Европы, расположенный в Московской области. Он является важным транспортным узлом, обеспечивающим перевозку пассажиров и грузов как внутри страны, так и за рубеж. 1" data-en="Domodedovo Airport is one of the largest airports in Russia and Eastern Europe, located in the Moscow region. It is an important transport hub providing transportation of passengers and cargo both within the country and abroad. 1" data-fr="L'aéroport de Domodedovo est l'un des plus grands aéroports de Russie et d'Europe de l'Est, situé dans la région de Moscou. C'est un nœud de transport important assurant le transport de passagers et de fret à la fois à l'intérieur du pays et à l'étranger. 1" data-de="Der Flughafen Domodedowo ist einer der größten Flughäfen in Russland und Osteuropa und befindet sich in der Region Moskau. Es ist ein wichtiger Verkehrsknotenpunkt für die Beförderung von Passagieren und Fracht sowohl im In- als auch im Ausland. 1" data-zh="多莫杰多沃机场是俄罗斯和东欧最大的机场之一，位于莫斯科地区。 它是一个重要的交通枢纽，为国内外旅客和货物的运输提供便利。 1">Аэропорт Домодедово — один из крупнейших аэропортов России и Восточной Европы, расположенный в Московской области. Он является важным транспортным узлом, обеспечивающим перевозку пассажиров и грузов как внутри страны, так и за рубеж. 1</p>
+         <img src="https://avatars.dzeninfra.ru/get-zen_doc/271828/pub_658670814266cc7bdbae292c_658671f3e132811a568aed8d/scale_1200" alt="Фото аэропорта Домодедово">
+    </section>
+
+    <section id="domodedovo">
+        <h2 data-key="domodedovo-title" data-ru="Domodedovo Airlines" data-en="Domodedovo Airlines" data-fr="Domodedovo Airlines" data-de="Domodedovo Airlines" data-zh="多莫杰多沃航空公司">Domodedovo Airlines</h2>
+         <p data-key="domodedovo-content" data-ru="Domodedovo Airlines — бывшая российская авиакомпания, базировавшаяся в аэропорту Домодедово. Она была основана в 1994 году и специализировалась на пассажирских и грузовых перевозках.  Однако в 2008 году она прекратила свою деятельность в связи с финансовыми проблемами. 1" data-en="Domodedovo Airlines is a former Russian airline based at Domodedovo Airport. It was founded in 1994 and specialized in passenger and cargo transportation. However, in 2008, it ceased operations due to financial problems. 1" data-fr="Domodedovo Airlines est une ancienne compagnie aérienne russe basée à l'aéroport de Domodedovo. Elle a été fondée en 1994 et s'est spécialisée dans le transport de passagers et de fret. Cependant, en 2008, elle a cessé ses activités en raison de problèmes financiers. 1" data-de="Domodedovo Airlines ist eine ehemalige russische Fluggesellschaft mit Sitz am Flughafen Domodedowo. Sie wurde 1994 gegründet und war auf den Personen- und Güterverkehr spezialisiert. Im Jahr 2008 stellte sie jedoch aufgrund finanzieller Probleme ihren Betrieb ein. 1" data-zh="多莫杰多沃航空公司是一家总部设在多莫杰多沃机场的俄罗斯前航空公司。 它成立于 1994 年，专门从事客运和货运业务。 然而，由于财务问题，它于 2008 年停止运营。 1">Domodedovo Airlines — бывшая российская авиакомпания, базировавшаяся в аэропорту Домодедово. Она была основана в 1994 году и специализировалась на пассажирских и грузовых перевозках.  Однако в 2008 году она прекратила свою деятельность в связи с финансовыми проблемами. 1
+        </p>
+       <img src="https://russianplanes.net/images/to1000/000385.jpg" alt="Логотип Domodedovo Airlines">
+    </section>
+    
+     <section id="trivia">
+        <h2 data-key="trivia-title" data-ru="Викторина" data-en="Quiz" data-fr="Quiz" data-de="Quiz" data-zh="测验">Викторина</h2>
+        <p data-key="trivia-content" data-ru="Угадай, что это за самолёт." data-en="Guess which airplane it is." data-fr="Devinez quel avion c'est." data-de="Raten Sie, welches Flugzeug es ist." data-zh="猜猜这是什么飞机。">Угадай, что это за самолёт.</p>
+        <div>
+            <img src="https://bgtrk.ru/upload/iblock/798/vxf30corse4ct542z1il625a4a4oom4n.jpg" alt="Фото самолёта">
+            <form id="quiz-form">
+                <label>
+                    <input type="radio" name="quiz" value="option1"> Boeing 737 </label>
+                </label><br>
+                <label>
+                    <input type="radio" name="quiz" value="option2"> Airbus 320
+                </label><br>
+                <label>
+                    <input type="radio" name="quiz" value="option3"> Sukhoi Superjet 100
+                </label><br>
+            </form>
+             <div id="result" class="result"></div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <p data-key="footer-text" data-ru="© 2025 Мир Авиации. Все права защищены." data-en="© 2025 World of Aviation. All rights reserved." data-fr="© 2025 Monde de l'aviation. Tous droits réservés." data-de="© 2025 Welt der Luftfahrt. Alle Rechte vorbehalten." data-zh="© 2025 航空世界。版权所有。">© 2025 Мир Авиации. Все права защищены.</p>
+</footer>
+
+<script>
+     const translations = {
+         ru: {
+            "title": "Добро пожаловать в мир авиации",
+            "origin-title": "Зарождение авиации",
+            "famous-people-title": "Известные люди",
+            "how-planes-work-title": "Принцип работы самолёта",
+            "civil-aviation-title": "Начало гражданской авиации",
+            "russian-designers-title": "Русские конструкторы гражданских самолётов",
+            "modern-aviation-title": "Современная гражданская авиация",
+            "domodedovo-airport-title": "Аэропорт Домодедово",
+             "domodedovo-title": "Domodedovo Airlines",
+            "trivia-title": "Викторина",
+             "test-link": "Тест",
+            "footer-text": "© 2025 Мир Авиации. Все права защищены.",
+              
+        },
+         en: {
+             "title": "Welcome to the World of Aviation",
+            "origin-title": "The Birth of Aviation",
+            "famous-people-title": "Famous Figures",
+             "how-planes-work-title": "How Planes Work",
+             "civil-aviation-title": "The Beginning of Civil Aviation",
+            "russian-designers-title": "Russian Civil Aircraft Designers",
+            "modern-aviation-title": "Modern Civil Aviation",
+            "domodedovo-airport-title": "Domodedovo Airport",
+            "domodedovo-title": "Domodedovo Airlines",
+            "trivia-title": "Quiz",
+            "test-link": "Test",
+             "footer-text": "© 2025 World of Aviation. All rights reserved.",
+           
+        },
+        fr: {
+             "title": "Bienvenue dans le monde de l'aviation",
+             "origin-title": "La naissance de l'aviation",
+            "famous-people-title": "Personnalités célèbres",
+             "how-planes-work-title": "Comment fonctionnent les avions",
+            "civil-aviation-title": "Les débuts de l'aviation civile",
+            "russian-designers-title": "Concepteurs russes d'avions civils",
+             "modern-aviation-title": "Aviation civile moderne",
+             "domodedovo-airport-title": "Aéroport de Domodedovo",
+              "domodedovo-title": "Domodedovo Airlines",
+            "trivia-title": "Quiz",
+            "test-link": "Test",
+             "footer-text": "© 2025 Monde de l'aviation. Tous droits réservés.",
+              
+        },
+       de: {
+             "title": "Willkommen in der Welt der Luftfahrt",
+            "origin-title": "Die Geburt der Luftfahrt",
+             "famous-people-title": "Berühmte Persönlichkeiten",
+             "how-planes-work-title": "Wie Flugzeuge funktionieren",
+            "civil-aviation-title": "Der Beginn der Zivilluftfahrt",
+            "russian-designers-title": "Russische zivile Flugzeugdesigner",
+            "modern-aviation-title": "Moderne Zivilluftfahrt",
+            "domodedovo-airport-title": "Flughafen Domodedowo",
+            "domodedovo-title": "Domodedovo Airlines",
+             "trivia-title": "Quiz",
+             "test-link": "Test",
+            "footer-text": "© 2025 Welt der Luftfahrt. Alle Rechte vorbehalten.",
+              
+        },
+        zh: {
+             "title": "欢迎来到航空世界",
+             "origin-title": "航空的诞生",
+             "famous-people-title": "著名人物",
+             "how-planes-work-title": "飞机的工作原理",
+             "civil-aviation-title": "民用航空的开始",
+             "russian-designers-title": "俄罗斯民用飞机设计师",
+            "modern-aviation-title": "现代民用航空",
+             "domodedovo-airport-title": "多莫杰多沃机场",
+            "domodedovo-title": "多莫杰多沃航空公司",
+            "trivia-title": "测验",
+             "test-link": "测验",
+             "footer-text": "© 2025 航空世界。版权所有。",
+            
+        }
+    };
+
+    document.getElementById('language-selector').addEventListener('change', function() {
+        const selectedLang = this.value;
+         document.querySelectorAll('[data-key]').forEach(el => {
+             const key = el.getAttribute('data-key');
+             if (el.dataset[selectedLang]) {
+              el.textContent = el.dataset[selectedLang];
+             } else {
+               el.textContent = translations[selectedLang][key];
+             }
+            
+          });
+    });
+
+    const form = document.getElementById('quiz-form');
+    const resultDiv = document.getElementById('result');
+    form.addEventListener('change', () => {
+        const answer = form.quiz.value;
+
+        if (answer === "option3") {
+            resultDiv.textContent = "Правильно!";
+            resultDiv.className = "result correct";
+        } else {
+            resultDiv.textContent = "Неправильно. Правильный ответ: Sukhoi Superjet 100";
+            resultDiv.className = "result incorrect";
+        }
+    });
+   document.getElementById('language-selector').value = 'ru';
+    document.getElementById('language-selector').dispatchEvent(new Event('change'));
+</script>
+</body>
+</html>
